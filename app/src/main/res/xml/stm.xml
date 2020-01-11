@@ -153,6 +153,16 @@
     <bus id="" logo="stm_local" name="219" />
     <bus id="" logo="stm_local" name="220" />
     <bus id="" logo="stm_local" name="225" />
+    <bus id="" logo="stm_local" name="252" />
+    <bus id="" logo="stm_local" name="253" />
+    <bus id="" logo="stm_local" name="254" />
+    <bus id="" logo="stm_local" name="256" />
+    <bus id="" logo="stm_local" name="257" />
+    <bus id="" logo="stm_local" name="258" />
+    <bus id="" logo="stm_local" name="259" />
+    <bus id="" logo="stm_local" name="260" />
+    <bus id="" logo="stm_local" name="262" />
+    <bus id="" logo="stm_local" name="263" />
     <bus id="" logo="stm_night" name="350" />
     <bus id="" logo="stm_night" name="353" />
     <bus id="" logo="stm_night" name="354" />
@@ -211,18 +221,7 @@
     <bus id="" logo="stm_express" name="491" />
     <bus id="255" logo="stm_express" name="495" />
     <bus id="256" logo="stm_express" name="496" />
-    <bus id="" logo="stm_shuttle" name="715" />
+    <bus id="257" logo="stm_shuttle" name="715" />
     <bus id="219" logo="stm_shuttle" name="747" />
     <bus id="" logo="stm_shuttle" name="777" />
-    <bus id="" logo="stm_local" name="252" />
-    <bus id="" logo="stm_local" name="253" />
-    <bus id="" logo="stm_local" name="254" />
-    <bus id="" logo="stm_local" name="256" />
-    <bus id="" logo="stm_local" name="257" />
-    <bus id="" logo="stm_local" name="258" />
-    <bus id="" logo="stm_local" name="259" />
-    <bus id="" logo="stm_local" name="260" />
-    <bus id="" logo="stm_local" name="262" />
-    <bus id="" logo="stm_local" name="263" />
-
 </stm>

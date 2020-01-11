@@ -18,7 +18,7 @@ Si le réseau de transport ou le numéro de bus est inconnu, l'utilisateur peut 
 #### Google Play 
 L'application est disponible sur Google Play.
 
-<a href='https://play.google.com/store/apps/details?id=etienned.lecteuropus'><img alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/fr-ca_badge_web_generic.png'/></a>
+<a href='https://play.google.com/store/apps/details?id=card.opus'><img alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/fr-ca_badge_web_generic.png'/></a>
 #### Compiler
 Toutes les sources sont disponibles dans le dépôt. AndroidStudioProject est utilisé pour compiler l'application.
 

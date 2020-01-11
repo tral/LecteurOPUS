@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lecteur OPUS</string>
+    <string name="app_name">OPUS</string>
     <string name="card_occa">CARTE OCCASIONNELLE</string>
     <string name="card_opus">CARTE OPUS</string>
     <string name="expiration">Expiration:</string>
