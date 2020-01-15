@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OPUS</string>
+    <string name="card_occa">КАРТА OCCASIONAL</string>
+    <string name="card_opus">КАРТА OPUS</string>
+    <string name="expiration">Истекает:</string>
+    <string name="ticket_remaining1">билет остался</string>
+    <string name="ticket_remaining2">билета осталось</string>
+    <string name="ticket_remaining5">билетов осталось</string>
+    <string name="last_trip">ПРОШЛАЯ ПОЕЗДКА</string>
+    <string name="last_trips">ПРОШЛЫЕ ПОЕЗДКИ</string>
+    <string name="unknown">Неизвестно</string>
+    <string name="cancel">Отменить</string>
+    <string name="send">Отправить</string>
+    <string name="help_us">Помогите нам улучшить приложение!</string>
+    <string name="thank_contribution">Спасибо за Ваш вклад.</string>
+    <string name="operator_hint">Перевозчик:</string>
+    <string name="number_hint">Маршрут:</string>
+    <string name="card_id">ID карты</string>
+    <string name="tap_card">Приложите карту к задней крышке телефона.</string>
+    <string name="nfc_disable">Необходимо включить NFC чтобы продолжить.</string>
+    <string name="disable_title">NFC выключен</string>
+    <string name="subscrip_title">ПРОЕЗДНОЙ</string>
+    <string name="until">Действителен до</string>
+    <string name="title_activity_card">карта активности</string>
+    <string name="other">Другой</string>
+    <string name="operator_missing">Перевозчики (STM, RTC, &#8230;)</string>
+    <string name="bus_missing">Маршрут</string>
+    <string name="vote_question">Можете ли Вы подтвердить, что указанный маршрут определен верно?</string>
+    <string name="vote_good">ВЕРНО</string>
+    <string name="vote_bad">НЕВЕРНО</string>
+    <string name="connection_error">Ощибка соединения с сервером</string>
+</resources>
