@@ -34,6 +34,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import static card.opus.Utils.DOMAIN;
 import static card.opus.Utils.isInternetAvailable;
@@ -124,11 +125,22 @@ public class CardActivity extends AppCompatActivity {
                     ImageView logo = (ImageView) customTicket.findViewById(R.id.logoTicket);
                     int nbTicket = contract.get(i).getNbTicket();
                     String ticket = "";
-                    if (nbTicket == 0 || nbTicket == 1) {
-                        ticket = nbTicket + " " + getString(R.string.ticket_remaining);
+
+
+                    if (Locale.getDefault().getLanguage().equalsIgnoreCase("ru")) {
+                        if (nbTicket <= 0) {
+                            ticket = nbTicket + " " + getString(R.string.ticket_remaining5);
+                        } else {
+                            ticket = nbTicket + " " + pluralForm(nbTicket);
+                        }
                     } else {
-                        ticket = nbTicket + " " + getString(R.string.tickets_remaining);
+                        if (nbTicket == 1) {
+                            ticket = nbTicket + " " + getString(R.string.ticket_remaining1);
+                        } else {
+                            ticket = nbTicket + " " + getString(R.string.ticket_remaining2);
+                        }
                     }
+
                     textTicket.setText(ticket);
                     int logoId = contract.get(i).getLogoId();
                     if (logoId != 0 && m_Card.getType() == Card.CardType.OPUS) logo.setImageResource(logoId);
@@ -141,7 +153,7 @@ public class CardActivity extends AppCompatActivity {
         if (compteurTicket == 0){ // 0 tickets
             View customTicket = inflater.inflate(R.layout.ticket, null);
             TextView textTicket = (TextView) customTicket.findViewById(R.id.NbTicket);
-            textTicket.setText("0 " + getString(R.string.ticket_remaining));
+            textTicket.setText("0 " + getString(R.string.ticket_remaining5));
             LayoutTicket.addView(customTicket);
         }
 
@@ -224,6 +236,16 @@ public class CardActivity extends AppCompatActivity {
                 Log.e(TAG, "Error writing file");
             }
         }
+    }
+
+    protected String pluralForm(int n)
+    {
+        n = Math.abs(n) % 100;
+        int n1 = n % 10;
+        if (n > 10 && n < 20) return getString(R.string.ticket_remaining5);
+        if (n1 > 1 && n1 < 5) return getString(R.string.ticket_remaining2);
+        if (n1 == 1) return getString(R.string.ticket_remaining1);
+        return getString(R.string.ticket_remaining5);
     }
 
     public void addUnknown(View v) {

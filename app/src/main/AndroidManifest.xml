@@ -14,9 +14,7 @@
         android:icon="@mipmap/ic_launcher2"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:versionCode="5"
-        android:versionName="1.2" >
+        android:theme="@style/AppTheme">
         <activity
             android:name="card.opus.MainActivity"
             android:label="@string/app_name"
