@@ -46,7 +46,7 @@
     <bus id="" logo="stm_local" name="56" />
     <bus id="" logo="stm_local" name="57" />
     <bus id="" logo="stm_local" name="58" />
-    <bus id="" logo="stm_local" name="61" />
+    <bus id="44" logo="stm_local" name="61" />
     <bus id="" logo="stm_local" name="63" />
     <bus id="46" logo="stm_local" name="64" />
     <bus id="" logo="stm_local" name="66" />
@@ -132,7 +132,7 @@
     <bus id="134" logo="stm_local" name="193" />
     <bus id="136" logo="stm_local" name="195" />
     <bus id="" logo="stm_local" name="196" />
-    <bus id="138" logo="stm_local" name="197" />
+    <bus id="138" logo="stm_local" name="197" /> <!-- reported wrong 2020-01-22 10:28:10 -->
     <bus id="" logo="stm_local" name="200" />
     <bus id="141" logo="stm_local" name="201" />
     <bus id="" logo="stm_local" name="202" />
@@ -141,7 +141,7 @@
     <bus id="145" logo="stm_local" name="205" />
     <bus id="" logo="stm_local" name="206" />
     <bus id="147" logo="stm_local" name="207" />
-    <bus id="" logo="stm_local" name="208" />
+    <bus id="148" logo="stm_local" name="208" />
     <bus id="149" logo="stm_local" name="209" />
     <bus id="151" logo="stm_local" name="211" />
     <bus id="" logo="stm_local" name="212" />
