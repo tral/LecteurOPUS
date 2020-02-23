@@ -5,4 +5,5 @@
     <bus id="1" logo="rtm_sh" name="TRAIN Mont-Saint-Hilaire" />
     <bus id="" logo="rtm_ca" name="TRAIN Candiac" />
     <bus id="7" logo="rtm_ma" name="TRAIN Mascouche" />
+    <bus id="11" logo="rtm_st" name="TRAIN Sainte-Therese" />
 </rtm>

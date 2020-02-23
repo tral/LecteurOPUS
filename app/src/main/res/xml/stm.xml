@@ -23,7 +23,7 @@
     <bus id="" logo="stm_local" name="29" />
     <bus id="" logo="stm_local" name="30" />
     <bus id="" logo="stm_local" name="31" />
-    <bus id="" logo="stm_local" name="32" />
+    <bus id="22" logo="stm_local" name="32" />
     <bus id="23" logo="stm_local" name="33" />
     <bus id="24" logo="stm_local" name="34" />
     <bus id="" logo="stm_local" name="36" />
@@ -217,7 +217,7 @@
     <bus id="" logo="stm_express" name="480" />
     <bus id="" logo="stm_express" name="485" />
     <bus id="" logo="stm_express" name="486" />
-    <bus id="" logo="stm_express" name="487" />
+    <bus id="253" logo="stm_express" name="487" />
     <bus id="" logo="stm_express" name="491" />
     <bus id="255" logo="stm_express" name="495" />
     <bus id="256" logo="stm_express" name="496" />

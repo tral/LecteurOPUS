@@ -18,7 +18,7 @@
     <bus id="20" logo="" name="21" />
     <bus id="" logo="" name="22" />
     <bus id="" logo="" name="23" />
-    <bus id="" logo="" name="25" />
+    <bus id="295" logo="" name="25" />
     <bus id="" logo="" name="28" />
     <bus id="23" logo="" name="29" />
     <bus id="" logo="" name="30" />
@@ -45,7 +45,7 @@
     <bus id="320" logo="" name="60" />
     <bus id="" logo="" name="61" />
     <bus id="52" logo="" name="71" />
-    <bus id="53" logo="" name="73" />
+    <bus id="53" logo="" name="73" /> <!-- reported false: 1 -->
     <bus id="" logo="" name="74" />
     <bus id="55" logo="" name="75" />
     <bus id="" logo="" name="76" />
@@ -105,7 +105,7 @@
     <bus id="" logo="" name="539" />
     <bus id="" logo="" name="540" />
     <bus id="" logo="" name="542" />
-    <bus id="" logo="" name="544" />
+    <bus id="368" logo="" name="544" />
     <bus id="" logo="" name="546" />
     <bus id="" logo="" name="547" />
     <bus id="" logo="" name="549" />

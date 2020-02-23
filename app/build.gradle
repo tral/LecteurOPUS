@@ -8,8 +8,8 @@ android {
         applicationId "card.opus"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 11
-        versionName "1.7.3"
+        versionCode 12
+        versionName "1.7.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

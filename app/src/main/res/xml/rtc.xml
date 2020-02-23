@@ -120,7 +120,7 @@
     <bus id="" logo="express" name="EXPRESS 374" />
     <bus id="" logo="express" name="EXPRESS 377" />
     <bus id="" logo="express" name="EXPRESS 380" />
-    <bus id="" logo="express" name="EXPRESS 381" />
+    <bus id="150" logo="express" name="EXPRESS 381" />
     <bus id="90" logo="express" name="EXPRESS 382" />
     <bus id="" logo="express" name="EXPRESS 384" />
     <bus id="94" logo="express" name="EXPRESS 391" />
