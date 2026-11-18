@@ -5,8 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity implements CardReader.AccountCallback{
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements CardReader.Accoun
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Utils.applySystemBarInsets(this);
         mCardReader = new CardReader(this);
     }
 
@@ -44,6 +45,11 @@ public class MainActivity extends AppCompatActivity implements CardReader.Accoun
         Log.i(TAG, "Enabling reader mode");
         Activity activity = this;
         NfcAdapter nfc = NfcAdapter.getDefaultAdapter(activity);
+        if (nfc == null) {
+            // No NFC hardware (e.g. emulator) - nothing to enable.
+            Log.w(TAG, "NFC not available on this device");
+            return;
+        }
         if (!nfc.isEnabled()) {
             AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
             alertDialog.setTitle(getString(R.string.disable_title));
@@ -58,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements CardReader.Accoun
                     });
             alertDialog.show();
         }
-        else if (nfc != null) {
+        else {
             nfc.enableReaderMode(activity, mCardReader, FLAG_MIFARE | FLAG_OPUS, null);
         }
     }
