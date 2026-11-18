@@ -3,10 +3,19 @@ package card.opus;
  * Created by etienned on 10/6/16.
  */
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.XmlResourceParser;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Log;
+import android.view.View;
+
+import androidx.core.graphics.Insets;
+import androidx.core.view.OnApplyWindowInsetsListener;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -31,6 +40,33 @@ public class Utils {
     public static final String TAG = "Util";
 
     final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
+
+    /**
+     * Edge-to-edge is enforced when targeting API 35+. The AppCompat action bar already
+     * handles the status bar, so pad the content for the navigation bar / cutouts and
+     * use dark status bar icons over the (white) window background.
+     */
+    public static void applySystemBarInsets(Activity activity) {
+        View content = activity.findViewById(android.R.id.content);
+        final int left = content.getPaddingLeft();
+        final int right = content.getPaddingRight();
+        final int bottom = content.getPaddingBottom();
+        ViewCompat.setOnApplyWindowInsetsListener(content, new OnApplyWindowInsetsListener() {
+            @Override
+            public WindowInsetsCompat onApplyWindowInsets(View v, WindowInsetsCompat insets) {
+                Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars()
+                        | WindowInsetsCompat.Type.displayCutout());
+                v.setPadding(left + bars.left, v.getPaddingTop(),
+                        right + bars.right, bottom + bars.bottom);
+                return insets;
+            }
+        });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+            new WindowInsetsControllerCompat(activity.getWindow(),
+                    activity.getWindow().getDecorView()).setAppearanceLightStatusBars(true);
+        }
+    }
 
    public static Calendar intToDateTime(int p_days, int p_mins){
        Calendar result = Calendar.getInstance();

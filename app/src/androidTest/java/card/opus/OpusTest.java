@@ -1,7 +1,7 @@
 package card.opus;
 
 import android.content.Context;
-import android.support.test.InstrumentationRegistry;
+import androidx.test.platform.app.InstrumentationRegistry;
 import android.util.Xml;
 
 import junit.framework.Assert;
@@ -28,7 +28,7 @@ public class OpusTest extends TestCase {
 
     // List all cards in src/androidTest/assets/cards/
     public static @DataPoints String[] cards() throws Exception{
-        Context ctx = InstrumentationRegistry.getContext();
+        Context ctx = InstrumentationRegistry.getInstrumentation().getContext();
         return ctx.getResources().getAssets().list("expected");
     }
 
@@ -42,7 +42,7 @@ public class OpusTest extends TestCase {
     public void testCardsInformation(String cardInput) throws Exception {
         XmlPullParser parser = Xml.newPullParser();
         parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
-        Context ctx = InstrumentationRegistry.getContext();
+        Context ctx = InstrumentationRegistry.getInstrumentation().getContext();
         InputStream input = ctx.getResources().getAssets().open("cards/" + cardInput);
         parser.setInput(input , null);
         parser.nextTag();
@@ -149,7 +149,7 @@ public class OpusTest extends TestCase {
                     }
                     int index = Integer.parseInt(parser.getAttributeValue(null, "index"));
                     Trip trip = card.getTrip().get(index);
-                    trip.setBusFromXml(InstrumentationRegistry.getTargetContext());
+                    trip.setBusFromXml(InstrumentationRegistry.getInstrumentation().getTargetContext());
 
                     String date = parser.getAttributeValue(null, "Date");
                     if(date != null)
@@ -182,7 +182,7 @@ public class OpusTest extends TestCase {
                     }
                     int index = Integer.parseInt(parser.getAttributeValue(null, "index"));
                     Contract contract = card.getContract().get(index);
-                    contract.setLogoFromXml(InstrumentationRegistry.getTargetContext());
+                    contract.setLogoFromXml(InstrumentationRegistry.getInstrumentation().getTargetContext());
 
                     String subscription = parser.getAttributeValue(null, "Subscription");
                     if (subscription != null)
